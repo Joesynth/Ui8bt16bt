@@ -1,0 +1,119 @@
+<html>
+  <head>
+    
+    <style>
+
+/* Geral */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#boL button, #boR button {
+  width: 3em;
+  height: 3em;
+}
+
+body {
+    background-color: lightgreen;
+  }
+  
+div {
+  background-color: lightsalmon;
+  height: 55%;
+}
+
+/* Aqui, em Geral, "$boL, boR top" atua só na tela deitada. Se esta propriedade top n for declara a tela deitada (somente) fica doida. Creio q isso acontece pq há elementos com position absolute" */
+#boL, #boR {
+position: absolute;
+top: 25%;
+}
+
+/* @media */
+/* Perceba que este "@medi" funciona como uma estrutura "if". Ou seja, se tela celular está em pé as propriedades CSS são 'x' senão são 'y'. */
+@media all and (max-width: 600px) {
+  
+  body {
+    background-color: lightblue;
+  }
+
+div {
+  background-color: lightsalmon;
+  height: 33%;
+}
+
+#boL, #boR {
+position: absolute;
+top: 66%;
+}
+
+#boL {
+background-color: red;
+}
+
+#boR {
+background-color: green;
+right: 0em;
+}
+    
+  }
+
+
+
+
+/* Atua em ambas as telas; ou seja, a em pé e a deitada. */
+
+
+#boL {
+background-color: red;
+}
+
+#boR {
+background-color: green;
+right: 0em;
+}
+   
+    </style>
+  
+  </head>
+  <body>
+    
+<aside id="boL">
+  <button>a</button>
+  <button>b</button> 
+  <br>
+  <button>c</button>
+  <button>d</button>
+  <br>
+  <button>e</button>
+  <button>f</button>
+  <br>
+  <button>g</button>
+  <button>h</button>
+</aside>
+<div>Box 2</div>
+<aside id="boR">
+  <button>A</button>
+  <button>B</button>
+  <button>C</button>
+  <button>D</button>
+  <br>
+  <button>E</button>
+  <button>F</button>
+  <button>G</button>
+  <button>H</button>
+  <br>
+  <button>I</button>
+  <button>J</button>
+  <button>K</button>
+  <button>L</button>
+  <br>
+  <button>M</button>
+  <button>N</button>
+  <button>O</button>
+  <button>P</button>
+</aside>
+    
+  </body>
+</html>
